@@ -1,0 +1,109 @@
+\documentclass[a4paper,11pt]{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2cm, right=2cm, marginparwidth=1.75cm]{geometry}  % Set 2cm margins on all sides
+\usepackage{setspace}  % For controlling line spacing
+
+\renewcommand{\baselinestretch}{1.0}  % Single line spacing
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{multirow}
+% Code listing settings
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Colors for code listings
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\makeatletter
+\renewcommand{\ALG@beginalgorithmic}{\vspace*{\topsep}}
+\renewcommand{\ALG@beginalgorithmic}{\scriptsize}
+\makeatother
+
+
+% graphics path
+\graphicspath{ {./images/} }
+
+% For AI declaration
+\newlist{checkbox}{itemize}{2}
+\setlist[checkbox]{label=$\square$}
+
+
+\title{[Title]}
+\author{Student ID: [HERE]}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    [ABSTRACT HERE]
+\end{abstract}
+
+\vspace*{\fill}
+
+\begin{checkbox}
+    \item {\bf I have not used any GenAI tools in preparing this assessment.}
+    \item {\bf I certify that all material in this dissertation which is not my own has been identified.}
+\end{checkbox}
+
+\newpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+\newpage
+
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+[Begin Report Here]
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}
